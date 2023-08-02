@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero"
+import HeroCard, { heroCardData } from "@/components/HeroCard"
 import Navbar from "@/components/Navbar"
 import Image from "next/image"
 import Link from "next/link"
@@ -10,61 +11,61 @@ export default function Home() {
       <Hero />
 
       <div>
-        <div className="w-1/2 mx-auto flex justify-center items-center rounded-full h-60 bg-gradient-to-r from-[#3E9EC2] to-[#00A3FF] -mt-28 text-white">
+        <div className="mx-auto -mt-28 flex h-60 w-1/2 items-center justify-center rounded-full bg-gradient-to-r from-[#3E9EC2] to-[#00A3FF] text-white">
           <div className="w-full px-28">
-            <div className="text-3xl text-start pb-5">Plus visités</div>
+            <div className="pb-5 text-start text-3xl">Plus visités</div>
             <div className="grid grid-cols-3 gap-3">
-              <Link href={""} className="font-bold text-xl underline">
+              <Link href={""} className="text-xl font-bold underline">
                 Lien page
               </Link>
               <Link
                 href={""}
-                className="font-bold text-xl underline place-self-center"
+                className="place-self-center text-xl font-bold underline"
               >
                 Lien page
               </Link>
               <Link
                 href={""}
-                className="font-bold text-xl underline place-self-end"
+                className="place-self-end text-xl font-bold underline"
               >
                 Lien page
               </Link>
-              <Link href={""} className="font-bold text-xl underline">
+              <Link href={""} className="text-xl font-bold underline">
                 Lien page
               </Link>
               <Link
                 href={""}
-                className="font-bold text-xl underline place-self-center"
-              >
-                Lien page
-              </Link>
-              <Link
-                href={""}
-                className="font-bold text-xl underline place-self-end"
-              >
-                Lien page
-              </Link>
-              <Link href={""} className="font-bold text-xl underline">
-                Lien page
-              </Link>
-              <Link
-                href={""}
-                className="font-bold text-xl underline place-self-center"
+                className="place-self-center text-xl font-bold underline"
               >
                 Lien page
               </Link>
               <Link
                 href={""}
-                className="font-bold text-xl underline place-self-end"
+                className="place-self-end text-xl font-bold underline"
+              >
+                Lien page
+              </Link>
+              <Link href={""} className="text-xl font-bold underline">
+                Lien page
+              </Link>
+              <Link
+                href={""}
+                className="place-self-center text-xl font-bold underline"
+              >
+                Lien page
+              </Link>
+              <Link
+                href={""}
+                className="place-self-end text-xl font-bold underline"
               >
                 Lien page
               </Link>
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-20 py-20">
+        <div className="flex items-center justify-center gap-20 py-20">
           <Image src="/visual2.png" alt={""} width={600} height={600} />
-          <div className="text-black flex flex-col text-lg gap-10 mt-20 w-1/3">
+          <div className="mt-20 flex w-1/3 flex-col gap-10 text-lg text-black">
             <p className="font-bold leading-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -82,6 +83,12 @@ export default function Home() {
             </p>
           </div>
         </div>
+      </div>
+
+      <div className="mx-auto my-5 grid max-w-7xl grid-cols-6 items-stretch gap-4">
+        {heroCardData.map((title, index) => (
+          <HeroCard key={index} title={title} isWide={index >= 6} />
+        ))}
       </div>
     </div>
   )
