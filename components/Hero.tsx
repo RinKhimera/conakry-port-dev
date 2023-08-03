@@ -1,22 +1,22 @@
 const Hero = () => {
   return (
     <div
-      className="bg-center bg-no-repeat bg-cover w-full h-screen"
+      className="h-screen w-full bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/bg.png')" }}
     >
-      <div className="flex justify-center gap-4 items-center pt-32 w-2/3 mx-auto">
-        <div className="uppercase text-white text-5xl font-black basis-5/12 border-t-4 pt-5  border-white">
+      <div className="mx-auto flex w-2/3 items-center justify-center gap-4 pt-32">
+        <div className="basis-5/12 border-t-4 border-white pt-5 text-5xl font-black uppercase  text-white">
           Bienvenue au Port Autonome de Conakry
         </div>
         <div className="">
-          <div className="bg-gradient-to-r from-[#3E9EC2] to-[#00A3FF] p-8 rounded-3xl">
+          <div className="rounded-3xl bg-gradient-to-r from-[#3E9EC2] to-[#00A3FF] p-8">
             <div className="text-lg text-white">
               Comment pouvons-nous vous aider ?
             </div>
             <input
               type="text"
               placeholder="Mots-clés"
-              className="w-full rounded-lg py-1.5 px-4"
+              className="w-full rounded-lg px-4 py-1.5"
             />
           </div>
         </div>
