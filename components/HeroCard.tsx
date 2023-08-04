@@ -22,8 +22,8 @@ const HeroCard = ({ title, isWide }: Props) => {
       href="#"
       className={`block w-full border border-gray-200 bg-[#DEDEDE] p-6 transition hover:bg-gray-100 ${
         isWide
-          ? "col-span-3 mt-16 flex h-40 flex-col justify-center"
-          : "col-span-2 flex h-80 flex-col justify-end"
+          ? "col-span-2 flex h-40 flex-col justify-center lg:col-span-3 lg:mt-16"
+          : "col-span-2 flex h-40 flex-col justify-center lg:h-80 lg:justify-end"
       }`}
     >
       <h5 className="text-center text-2xl font-bold uppercase tracking-tight text-gray-900">
